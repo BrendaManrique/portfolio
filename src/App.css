@@ -28,7 +28,7 @@ svg {
   
 .scrollElement {
       position: absolute;
-      height: 6000px;
+      height: 7000px;
       width: 100px;
       top: 0;
       z-index: 0;

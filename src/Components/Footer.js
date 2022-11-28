@@ -4,6 +4,7 @@ import Fade from "react-reveal";
 class Footer extends Component {
   render() {
     if (!this.props.data) return null;
+    const resumeDownload = this.props.data.resumeDownload;
 
     const networks = this.props.data.social.map(function (network) {
       return (
@@ -18,7 +19,20 @@ class Footer extends Component {
     return (
       <footer>
         <div className="row">
-          <Fade bottom>
+        <Fade duration={1000}>
+          <div className="row">
+            <div >
+              
+              <div className="download">
+                <a href={resumeDownload} className="button">
+                  <i className="fa fa-download"></i> Download Resume
+                </a>
+              </div>
+            </div>
+            
+          </div>
+        </Fade>
+         {/*<Fade bottom>
             <div className="twelve columns">
               <ul className="social-links">{networks}</ul>
 
@@ -38,7 +52,7 @@ class Footer extends Component {
             <a className="smoothscroll" title="Back to Top" href="#home">
               <i className="icon-up-open"></i>
             </a>
-          </div>
+          </div>*/}
         </div>
       </footer>
     );

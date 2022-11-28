@@ -6,10 +6,12 @@ class Header extends Component {
   render() {
     if (!this.props.data) return null;
 
-    const project = this.props.data.project;
+    const linkedin = this.props.data.linkedin;
     const github = this.props.data.github;
+    const medium = this.props.data.medium;
+    const youcanbookme = this.props.data.youcanbookme;
     const name = this.props.data.name;
-    const description = this.props.data.description;
+    const data = this.props.data;
 
     return (
       <header id="home">
@@ -59,22 +61,34 @@ class Header extends Component {
         <div className="row banner">
           <div className="banner-text">
             <Fade bottom>
-              <h1 className="responsive-headline">{name}</h1>
+              <h1 className="responsive-headline">{data.name}</h1>
             </Fade>
             <Fade bottom duration={1200}>
-              <h3>{description}.</h3>
+              <h3 className="social">{data.description1}
+              <a href={data.daftpunk} target="_blank" rel="noopener noreferrer">
+                  <i className="fa fa-volume-up"></i>
+                </a> 
+                <br/> {data.description2}
+                <br/> {data.description3}
+                </h3>
             </Fade>
             <hr />
-            {/*<Fade bottom duration={2000}>
+            <Fade bottom duration={2000}>
               <ul className="social">
-                <a href={project} className="button btn project-btn">
-                  <i className="fa fa-book"></i>Project
+                <a href={linkedin} target="_blank" rel="noopener noreferrer" >
+                  <i className="fa fa-linkedin"></i>
                 </a>
-                <a href={github} className="button btn github-btn">
-                  <i className="fa fa-github"></i>Github
+                <a href={github} target="_blank" rel="noopener noreferrer">
+                  <i className="fa fa-github"></i>
+                </a>
+                <a href={medium} target="_blank" rel="noopener noreferrer">
+                  <i className="fa fa-keyboard-o"></i>
+                </a>
+                <a href={youcanbookme} target="_blank" rel="noopener noreferrer">
+                  <i className="fa fa-calendar"></i>
                 </a>
               </ul>
-            </Fade>*/}
+            </Fade>
           </div>
         </div>
 

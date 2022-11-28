@@ -50,8 +50,8 @@
    /* About Section
    ------------------------------------------------------------------- */
    #about .profile-pic {
-      width: 114px;
-      height: 114px;
+      width: 180px;
+      height: 160px;
       margin-left: 12px;
    }
    #about .contact-details { width: 50%; }
@@ -198,7 +198,7 @@
    }
    header .banner-text hr {
       width: 80%;
-      margin: 18px auto;
+      margin: 10px auto;
    }
 
    /* header social links */
