@@ -33,7 +33,7 @@ header {
    height: 500px !important;
    min-height: 500px;
    width: 100%;
-   padding-top: 25rem;
+   /* padding-top: 25rem; */
    
    text-align: center;
    overflow: hidden;
@@ -53,20 +53,21 @@ header .banner {
    width: 85%;
    padding-bottom: 30px;
    text-align: center;
+   text-align: '-webkit-center';
 }
 
-header .banner-text { width: 100%; margin-top: -25%; }
+header .banner-text { width: 100%; }
 header .banner-text h1 {
-   font: 90px/1.1em 'opensans-bold', sans-serif;
+   font: 30px/1.1em 'opensans-bold', sans-serif !important;
    color: #6a4062;
-   letter-spacing: -2px;
+   /* letter-spacing: -2px; */
    margin: 0 auto 18px auto;
 }
 header .banner-text h3 {
-   font: 18px/1.9em 'librebaskerville-regular', serif;
+   font: 36px/1.9em 'librebaskerville-regular', serif;
    color: #6c6a6a;
    margin: 0 auto;
-   width: 70%;
+   width: 45%;
 }
 header .banner-text h3 span,
 header .banner-text h3 a {
@@ -83,14 +84,15 @@ header .banner-text hr {
 header .social {
    margin: 10px 0;
    padding: 0;
-   font-size: 30px;
+   font-size: 2rem;
+   text-align: left;
 }
 header .social a {
    display: inline-block;
    margin: 0 10px;
-   padding: 0;
+   padding: 0.1rem 2rem !important;
 }
-header .social a { color: #6c6a6a; }
+header .social a { color: #7c4d73; }
 header .social a:hover { color: #2e2a53; }
 
 /* scrolldown link */
@@ -125,18 +127,25 @@ header .scrolldown a:hover { color: #0762f9; }
 }
 
 /* nav-wrap */
-#nav-wrap {
-   font: 12px 'opensans-bold', sans-serif;
-   width: 100%;
+#nav-wrap, #nav-wrap-bottom {
+   font: 12px 'opensans', sans-serif;
+   /* width: 100%; */
    text-transform: uppercase;
    letter-spacing: 2.5px;
    margin: 0 auto;
    z-index: 100;
    position: fixed;
-   left: 0;
-   top: 0;
+   left: 1rem;
 }
-.opaque { background-color: #1d1d3a; }
+
+#nav-wrap{
+   top: 2rem;
+}
+#nav-wrap-bottom{
+   bottom: 2rem;
+}
+
+.opaque { background-color: transparent; }
 
 /* hide toggle button */
 #nav-wrap > a.mobile-btn { display: none; }
@@ -151,8 +160,9 @@ ul#nav {
 ul#nav li {
    position: relative;
    list-style: none;
-   height: 48px;
-   display: inline-block;
+   text-align: left;
+   /* height: 48px; */
+   /* display: inline-block; */
 }
 
 /* Links */
@@ -161,8 +171,8 @@ ul#nav li a {
 /* 8px padding top + 8px padding bottom + 32px line-height = 48px */
 
    display: inline-block;
-   padding: 8px 13px;
-   line-height: 32px;
+   padding: 0.4rem 2rem;
+   /* line-height: 32px; */
 	text-decoration: none;
    text-align: left;
    color: #7c4d73;

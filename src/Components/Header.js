@@ -15,8 +15,6 @@ class Header extends Component {
 
     return (
       <header id="home">
-        {/*<ParticlesBg type="circle" bg={true} />*/}
-
         <nav id="nav-wrap">
           <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
             Show navigation
@@ -57,37 +55,35 @@ class Header extends Component {
             </li>
           </ul>
         </nav>
+        <nav id="nav-wrap-bottom">
+          <Fade bottom duration={2000}>
+              <ul className="social">
+              <li><a href={linkedin} target="_blank" rel="noopener noreferrer" >
+                  <i className="fa fa-linkedin"></i>
+                </a></li>
+                <li><a href={github} target="_blank" rel="noopener noreferrer">
+                  <i className="fa fa-github"></i>
+                </a></li>
+                <li><a href={medium} target="_blank" rel="noopener noreferrer">
+                  <i className="fa fa-keyboard-o"></i>
+                </a></li>
+                <li><a href={youcanbookme} target="_blank" rel="noopener noreferrer">
+                  <i className="fa fa-calendar"></i>
+                </a></li>
+              </ul>
+            </Fade>
+        </nav>
 
         <div className="row banner">
           <div className="banner-text">
-            <Fade bottom>
-              <h1 className="responsive-headline">{data.name}</h1>
-            </Fade>
             <Fade bottom duration={1200}>
-              <h3 className="social">{data.description1}
-              <a href={data.daftpunk} target="_blank" rel="noopener noreferrer">
-                  <i className="fa fa-volume-up"></i>
-                </a> 
-                <br/> {data.description2}
-                <br/> {data.description3}
+              <h3 className="">
+                {data.description2}
                 </h3>
             </Fade>
             <hr />
-            <Fade bottom duration={2000}>
-              <ul className="social">
-                <a href={linkedin} target="_blank" rel="noopener noreferrer" >
-                  <i className="fa fa-linkedin"></i>
-                </a>
-                <a href={github} target="_blank" rel="noopener noreferrer">
-                  <i className="fa fa-github"></i>
-                </a>
-                <a href={medium} target="_blank" rel="noopener noreferrer">
-                  <i className="fa fa-keyboard-o"></i>
-                </a>
-                <a href={youcanbookme} target="_blank" rel="noopener noreferrer">
-                  <i className="fa fa-calendar"></i>
-                </a>
-              </ul>
+            <Fade bottom>
+              <h1 className="responsive-headline">{data.name}</h1>
             </Fade>
           </div>
         </div>
